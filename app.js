@@ -36,7 +36,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //-------- Connecting to MongoDB Server ---------//
-mongoose.connect("mongodb://127.0.0.1:27017/userDB")
+mongoose.connect("mongodb+srv://admin-priyam:" + process.env.MONGODB_PASSWORD + "@cluster0.4e7tz9k.mongodb.net/userDB")
 
 //--------- Defining new Schema ---------//
 const userSchema = new mongoose.Schema({
